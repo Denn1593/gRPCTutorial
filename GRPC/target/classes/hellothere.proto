@@ -1,0 +1,14 @@
+option java_multiple_files = true;
+
+message HelloRequest {
+  required string name = 1;
+  required int32 number = 2;
+}
+
+message HelloResponse {
+  required string response = 1;
+}
+
+service HelloService {
+  rpc Greet(HelloRequest) returns (HelloResponse);
+}
